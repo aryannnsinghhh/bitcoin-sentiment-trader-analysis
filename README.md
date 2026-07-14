@@ -11,9 +11,9 @@ Traders perform best (highest win rate, highest profit) during Extreme Greed —
 - **[Fear/Greed Index](https://drive.google.com/file/d/1PgQC0tO8XN-wqkNyghWc_-mnrYv_nhSf/view)**: Bitcoin Fear/Greed Index (daily classification: Extreme Fear → Extreme Greed).
 
 ## Data Quality Notes
-- The trader dataset's `Timestamp` column (unix epoch, ms) was found to be corrupted — only 7 unique values across 211,224 rows. Discarded in favor of the `Timestamp IST` string column, which was parsed and validated instead.
+- The trader dataset's `Timestamp` column (unix epoch, ms) was found to be corrupted, only 7 unique values across 211,224 rows. Discarded in favor of the `Timestamp IST` string column, which was parsed and validated instead.
 - 6 rows (0.003%) had no matching sentiment date after the merge and were dropped.
-- Only **32 unique trading accounts** are present in the dataset. Findings reflect the behavior of a small, likely sophisticated/algorithmic trader base — not a representative retail sample. Generalize with caution.
+- Only **32 unique trading accounts** are present in the dataset. Findings reflect the behavior of a small, likely sophisticated/algorithmic trader base, not a representative retail sample. Generalize with caution.
 
 ## Methodology
 1. Parsed and validated timestamps from `Timestamp IST`.
@@ -56,5 +56,5 @@ jupyter notebook analysis.ipynb
 ```
 
 ## Limitations
-- Small account sample (n=32) - findings are descriptive, not statistically generalizable.
+- Small account sample (n=32): findings are descriptive, not statistically generalizable.
 - Correlation only; no causal claims about sentiment driving performance.

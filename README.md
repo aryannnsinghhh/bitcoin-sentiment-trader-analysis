@@ -33,7 +33,7 @@ Traders perform best (highest win rate, highest profit) during Extreme Greed —
 | Greed | 77% | $4.9 | $5,737 |
 | Extreme Greed | 89% | $8.6 | $3,112 |
 
-Note: win rates here are unusually high relative to typical trading data (40-55% is more common even for profitable traders) - likely a function of the small, non-representative account sample rather than a universal pattern.
+**Note on win rate:** The win rate numbers above count every trade *fill*, not every finished trade. On Hyperliquid, if a trader closes one position in multiple steps (say, sells in 3 batches instead of one), that shows up as 3 separate rows in the data — and if that trade was profitable, it gets counted as 3 wins instead of 1. Losing trades are more often closed in a single step (e.g., a stop-loss triggering all at once), so they don't get this multiplier. This likely inflates the win rate numbers above. A more accurate approach would group all fills belonging to the same trade together first, then count win/loss once per trade — this wasn't done here due to time constraints, but is a known limitation of the current numbers.
 
 **2. Fear regimes see the largest position sizes, despite not having the best performance.** Traders size up the most during Fear ($7,816 avg) but Extreme Greed, with the smallest average size ($3,112), has better win rate and PnL. Sizing behavior doesn't track with where performance is actually best.
 
